@@ -8,6 +8,7 @@ from src.exception import CustomException
 
 from src.components.data_ingestion import DataIngestion
 from src.components.data_transformation import DataTransformation
+from src.components.model_trainer import ModelTrainer
 
 if __name__ == "__main__":
     obj = DataIngestion()
@@ -16,4 +17,7 @@ if __name__ == "__main__":
     
     obj1 = DataTransformation()
     train_arr,test_arr,obj_path = obj1.initiate_transformation(train_data_path,test_data_path)
+
+    obj2 = ModelTrainer()
+    obj2.initate_training(train_arr,test_arr)
 
