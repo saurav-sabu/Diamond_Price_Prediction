@@ -41,11 +41,12 @@
   <div class="min-h-screen bg-gray-100 p-0 sm:p-12" style="background-image: url('Images/bg.jpg')">
     <div class="mx-auto max-w-md px-6 py-12 bg-white border-0 shadow-lg sm:rounded-3xl">
       <h1 class="text-2xl font-bold mb-8">Diamond Price Prediction</h1>
-      <form id="form">
+      <form id="form" action="{{url_for('predict_data')}}">
         <div class="relative z-0 w-full mb-5">
           <input
             type="number"
-            name="Carat"
+            name="carat"
+            id="carat"
             placeholder=" "
             required
             class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
@@ -56,7 +57,8 @@
 
           <div class="relative z-0 w-full mb-5">
             <select
-              name="select"
+              name="cut"
+              id="cut"
               value=""
               onclick="this.setAttribute('value', this.value);"
               class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none z-1 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
@@ -74,7 +76,8 @@
           
           <div class="relative z-0 w-full mb-5">
             <select
-              name="select"
+              name="color"
+              id="color"
               value=""
               onclick="this.setAttribute('value', this.value);"
               class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none z-1 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
@@ -94,7 +97,8 @@
 
           <div class="relative z-0 w-full mb-5">
             <select
-              name="select"
+              name="clarity"
+              id = "clarity"
               value=""
               onclick="this.setAttribute('value', this.value);"
               class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none z-1 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
@@ -116,7 +120,8 @@
           <div class="relative z-0 w-full mb-5">
             <input
               type="number"
-              name="Depth"
+              name="depth"
+              id="depth"
               placeholder=" "
               required
               class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
@@ -128,7 +133,8 @@
           <div class="relative z-0 w-full mb-5">
             <input
               type="number"
-              name="Table"
+              name="table"
+              id="table"
               placeholder=" "
               required
               class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
@@ -140,7 +146,8 @@
           <div class="relative z-0 w-full mb-5">
             <input
               type="number"
-              name="X"
+              name="x"
+              id="x"
               placeholder=" "
               required
               class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
@@ -152,7 +159,8 @@
           <div class="relative z-0 w-full mb-5">
             <input
               type="number"
-              name="Y"
+              name="y"
+              id="y"
               placeholder=" "
               required
               class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
@@ -164,7 +172,8 @@
           <div class="relative z-0 w-full mb-5">
             <input
               type="number"
-              name="Z"
+              name="z"
+              id="z"
               placeholder=" "
               required
               class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
@@ -182,6 +191,7 @@
         </button>
       </form>
     </div>
+    {{final_result}}
   </div>
     
 </body>

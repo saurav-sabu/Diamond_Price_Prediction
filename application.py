@@ -9,10 +9,12 @@ app = application
 def homepage():
     return render_template("index.html")
 
-@app.route("/#form",methods=["GET","POST"])
+@app.route("/predict",methods=["GET","POST"])
 def predict_data():
     
-    if request.method=="POST":
+    if request.method=='GET':
+        return render_template('form.html')
+    else:
         data = CustomData(
             carat = float(request.form.get("carat")),
             depth = float(request.form.get("depth")),
@@ -29,11 +31,8 @@ def predict_data():
         pred = predict_pipe.predict(final_data)
         results = round(pred[0],2)
 
-        return render_template("index.html",final_result=results)
-    else:
-        render_template("index.html")
+        return render_template("form.html",final_result=results)
 
-       
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0",debug=True)
