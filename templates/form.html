@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header class="header sticky top-0 bg-white shadow-md flex items-center justify-between px-8 py-02">
+        <!-- logo -->
+        <h1 class="w-3/12">
+            <a href="">
+              <h1>Diamond Price Prediction: A Sparkling Forecast</h1>
+            </a>
+        </h1>
+    
+        <!-- navigation -->
+        <nav class="nav font-semibold text-lg z-50">
+            <ul class="flex items-center">
+                <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer active">
+                  <a href="index.html">Home</a>
+                </li>
+                <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
+                  <a href="">Product</a>
+                </li>
+                <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
+                  <a href="">Collections</a>
+                </li>
+                <li class="p-4 border-b-2 border-violet-500 border-opacity-0 hover:border-opacity-100 hover:text-violet-500 duration-200 cursor-pointer">
+                  <a href="form.html">Diamond Price Prediction</a>
+                </li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <!-- ---------- Form ---------- -->
+
+  <div class="min-h-screen bg-gray-100 p-0 sm:p-12" style="background-image: url('Images/bg.jpg')">
+    <div class="mx-auto max-w-md px-6 py-12 bg-white border-0 shadow-lg sm:rounded-3xl">
+      <h1 class="text-2xl font-bold mb-8">Diamond Price Prediction</h1>
+      <form id="form">
+        <div class="relative z-0 w-full mb-5">
+          <input
+            type="number"
+            name="Carat"
+            placeholder=" "
+            required
+            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+          />
+          <label for="name" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter Carat</label>
+          <span class="text-sm text-red-600 hidden" id="error">Carat is required</span>
+        </div>
+
+          <div class="relative z-0 w-full mb-5">
+            <select
+              name="select"
+              value=""
+              onclick="this.setAttribute('value', this.value);"
+              class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none z-1 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+            >
+              <option value="" selected disabled hidden></option>
+              <option value="1">Ideal</option>
+              <option value="2">Premium</option>
+              <option value="3">Very Good</option>
+              <option value="4">Good</option>
+              <option value="5">Fair</option>
+            </select>
+            <label for="select" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Select Cut</label>
+            <span class="text-sm text-red-600 hidden" id="error">Option has to be selected</span>
+          </div>    
+          
+          <div class="relative z-0 w-full mb-5">
+            <select
+              name="select"
+              value=""
+              onclick="this.setAttribute('value', this.value);"
+              class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none z-1 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+            >
+              <option value="" selected disabled hidden></option>
+              <option value="1">G</option>
+              <option value="2">E</option>
+              <option value="3">F</option>
+              <option value="4">H</option>
+              <option value="5">D</option>
+              <option value="5">I</option>
+              <option value="5">J</option>
+            </select>
+            <label for="select" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Select Color</label>
+            <span class="text-sm text-red-600 hidden" id="error">Option has to be selected</span>
+          </div> 
+
+          <div class="relative z-0 w-full mb-5">
+            <select
+              name="select"
+              value=""
+              onclick="this.setAttribute('value', this.value);"
+              class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none z-1 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+            >
+              <option value="" selected disabled hidden></option>
+              <option value="1">SI1</option>
+              <option value="2">VS2</option>
+              <option value="3">VS1</option>
+              <option value="4">SI2</option>
+              <option value="5">VVS2</option>
+              <option value="5">VVS1</option>
+              <option value="5">IF</option>
+              <option value="5">I1</option>
+            </select>
+            <label for="select" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Select Clarity</label>
+            <span class="text-sm text-red-600 hidden" id="error">Option has to be selected</span>
+          </div> 
+
+          <div class="relative z-0 w-full mb-5">
+            <input
+              type="number"
+              name="Depth"
+              placeholder=" "
+              required
+              class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+            />
+            <label for="name" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter Depth</label>
+            <span class="text-sm text-red-600 hidden" id="error">Depth is required</span>
+          </div>
+          
+          <div class="relative z-0 w-full mb-5">
+            <input
+              type="number"
+              name="Table"
+              placeholder=" "
+              required
+              class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+            />
+            <label for="name" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter Table</label>
+            <span class="text-sm text-red-600 hidden" id="error">Table is required</span>
+          </div>  
+
+          <div class="relative z-0 w-full mb-5">
+            <input
+              type="number"
+              name="X"
+              placeholder=" "
+              required
+              class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+            />
+            <label for="name" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter Value Of X</label>
+            <span class="text-sm text-red-600 hidden" id="error">X is required</span>
+          </div> 
+
+          <div class="relative z-0 w-full mb-5">
+            <input
+              type="number"
+              name="Y"
+              placeholder=" "
+              required
+              class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+            />
+            <label for="name" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter Value Of Y</label>
+            <span class="text-sm text-red-600 hidden" id="error">Y is required</span>
+          </div> 
+
+          <div class="relative z-0 w-full mb-5">
+            <input
+              type="number"
+              name="Z"
+              placeholder=" "
+              required
+              class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+            />
+            <label for="name" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter Value Of Z</label>
+            <span class="text-sm text-red-600 hidden" id="error">Z is required</span>
+          </div> 
+  
+        <button
+          id="button"
+          type="button"
+          class="w-full px-6 py-3 mt-3 text-lg text-white transition-all duration-150 ease-linear rounded-lg shadow outline-none bg-pink-500 hover:bg-pink-600 hover:shadow-lg focus:outline-none"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+    
+</body>
+</html>
